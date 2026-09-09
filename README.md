@@ -2,7 +2,7 @@
 Datasets, codes, and numerical results for reproduce the results in "Transition-based state clustering in hidden Markov models".
 
 ## Environment Details
-- **Operating System**: Ubuntu 22.04.2 LTS/ Windows 11
+- **Operating System**: Ubuntu 22.04.2 LTS
 - **Programming Language**: R 4.5.0
 
 ## Repository Structure
@@ -15,29 +15,15 @@ Datasets, codes, and numerical results for reproduce the results in "Transition-
 
 ### Reproduction Workflow
 
-**Note:** Simulation 4 corresponds to the comparison with BMC in the fully observed Markov-chain setting. CMC corresponds to the fully observed Markov-chain version of CHMM in Simulation 4.
-
 1. **Restore the R environment**
 
    ```r
    install.packages("renv")  # if not already installed
    renv::restore()
-2. **(Ubuntu 22.04.2 LTS) Run the reproduction scripts for numerical results except BMC**
+2. **Run the reproduction scripts for numerical results**
 
-   Run `code/Simulation/Reproduce_Simulation123.R`, `code/Simulation/Reproduce_Simulation4.R`, `code/Simulation/Reproduce_SensitivityAnalysis.R`, and `code/Real_data_analysis/Reproduce-Protein_structure_analysis.R`.
-   
-3. **(Windows 11) Reproduce the BMC results for Simulation 4**
+   Run `code/Simulation/Reproduce_Simulation123.R` and `code/Real_data_analysis/Reproduce-Protein_structure_analysis.R`.
 
-   Generate Python environment for BMC and install BMCToolkit (https://pypi.org/project/BMCToolkit/#description):
-   ```r
-   conda_create("bmc-py", packages = "python=3.11")
-   use_condaenv("bmc-py", required = TRUE)
-   py_install(c("numpy<2", "BMCToolkit"), envname = "bmc-py", pip = TRUE)
-   ```
-   Run `code/Simulation/Reproduce_Simulation4-BMC.R`.
-
-4. **Run the reproduction scripts for figures in manuscripts**
+3. **Run the reproduction scripts for figure 2 in manuscripts**
 
    Run `code/Real_data_analysis/Figure-Protein_structure_analysis.R`.
-
-   **Important**: Reproducing **Figure S2** requires a brief manual action. Please follow the instructions provided in the *####Code generating Figure S2####* section of `code/Real_data_analysis/Figure-Protein_structure_analysis.R` before running that part of the script.
