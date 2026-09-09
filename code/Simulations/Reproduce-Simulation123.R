@@ -273,7 +273,7 @@ Sim1_M3 <- run_one_model(model_name = "Sim1-M3", seed_vec = Model3_seed, m = 20,
 Sim1_M4 <- run_one_model(model_name = "Sim1-M4", seed_vec = Model4_seed, m = 20, K = 5, zeta = 0.8,
                           data_dim = data_dim, dist_class = dist_class)
 
-save(Sim1_M1, Sim1_M2, Sim1_M3, Sim1_M4, file = "results/Simulation/Simulation1_results.Rdata")
+save(Sim1_M1, Sim1_M2, Sim1_M3, Sim1_M4, file = "results/Simulation1_results.Rdata")
 
 ## Simulation 2
 Sim2_M1 <- run_one_model(model_name = "Sim2-M1", seed_vec = Model1_seed, m = 10, K = 3, zeta = 0.2,
@@ -288,7 +288,7 @@ Sim2_M3 <- run_one_model(model_name = "Sim2-M3", seed_vec = Model3_seed, m = 20,
 Sim2_M4 <- run_one_model(model_name = "Sim2-M4", seed_vec = Model4_seed, m = 20, K = 5, zeta = 0.2,
                             data_dim = data_dim, dist_class = dist_class)
 
-save(Sim2_M1, Sim2_M2, Sim2_M3, Sim2_M4, file = "results/Simulation/Simulation2_results.Rdata")
+save(Sim2_M1, Sim2_M2, Sim2_M3, Sim2_M4, file = "results/Simulation2_results.Rdata")
 
 ## Simulation 3
 Sim3_M1 <- run_one_model(model_name = "Sim3-M1", seed_vec = Model1_seed, m = 10, K = 10, zeta = 0.2,
@@ -303,7 +303,7 @@ Sim3_M3 <- run_one_model(model_name = "Sim3-M3", seed_vec = Model3_seed, m = 20,
 Sim3_M4 <- run_one_model(model_name = "Sim3-M4", seed_vec = Model4_seed, m = 20, K = 20, zeta = 0.8,
                             data_dim = data_dim, dist_class = dist_class)
 
-save(Sim3_M1, Sim3_M2, Sim3_M3, Sim3_M4, file = "results/Simulation/Simulation3_results.Rdata")
+save(Sim3_M1, Sim3_M2, Sim3_M3, Sim3_M4, file = "results/Simulation3_results.Rdata")
 
 
 

@@ -3,7 +3,7 @@
 ################################################################################
 #### Preliminary ####
 # Load functions
-sapply(c("code/Functions/EM_MLE.R","code/functions/EM_MPLE.R"), source)
+sapply(c("code/Functions/EM_MLE.R","code/Functions/EM_MPLE.R"), source)
 
 
 # Load data
