@@ -26,7 +26,7 @@ Datasets, codes, and numerical results for reproduce the results in "Transition-
    renv::restore()
 3. **Run the reproduction scripts for numerical results**
 
-   Run `code/Simulations/Reproduce-Simulation123.R` and `code/Real_data_analysis/Reproduce-Protein_structure_analysis.R`.
+   Run `code/Simulations/Reproduce-Simulation12.R` and `code/Real_data_analysis/Reproduce-Protein_structure_analysis.R`.
 
 4. **Run the reproduction scripts for figure 2 in manuscripts**
 
