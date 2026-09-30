@@ -303,9 +303,21 @@ SS_match_combined <- SS_match_combined %>%
 
 bar_width <- 0.8
 
+ss_colors <- c(
+  "3-10 Helix"            = "#51191C",  # very dark red
+  "Alpha Helix"           = "#38426D",  # dark blue
+  "Bend"                  = "#6F5D01",  # ochre
+  "Extended strand"       = "#1F8A5A",  # green
+  "Hydrogen bonded turn"  = "#BC83B9",  # purple
+  "Isolated beta-bridge"  = "#6CC0C7",  # cyan
+  "Other or Coil"         = "#C7D4AA",  # light yellow-green
+  "Pi Helix"              = "#FCE2E9"   # very light pink
+)
+
 ss_fill_scale <- function() {
-  scale_fill_discrete(
+  scale_fill_manual(
     name = "Secondary structure",
+    values = ss_colors,
     limits = ss_levels,
     drop = FALSE,
     guide = guide_legend(
@@ -314,6 +326,21 @@ ss_fill_scale <- function() {
     )
   )
 }
+
+# ss_fill_scale <- function() {
+#   scale_fill_viridis_d(
+#     name = "Secondary structure",
+#     option = "D",
+#     begin = 0.05,
+#     end = 0.95,
+#     limits = ss_levels,
+#     drop = FALSE,
+#     guide = guide_legend(
+#       ncol = 1,
+#       byrow = TRUE
+#     )
+#   )
+# }
 
 theme_ss <- theme_minimal(base_size = 9) +
   theme(
